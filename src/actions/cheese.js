@@ -4,7 +4,7 @@ export const fetchCheeses = () => dispatch =>
 {
   dispatch(fetchCheesesRequest());
   return(
-        fetch (`${API_BASE_URL}/cheeses`, {
+        fetch ('https://bgraham-cheese-hub.herokuapp.com/api/cheeses', {
              method: 'GET'
         })
         .then(res => {
