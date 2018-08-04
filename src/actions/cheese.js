@@ -1,9 +1,10 @@
+import { API_BASE_URL } from '../config';
 
 export const fetchCheeses = () => dispatch =>
 {
   dispatch(fetchCheesesRequest());
   return(
-        fetch ('http://localhost:8080/api/cheeses', {
+        fetch (`${API_BASE_URL}/cheeses`, {
              method: 'GET'
         })
         .then(res => {
